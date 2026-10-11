@@ -18,29 +18,13 @@ Finding a junior developer job or freelance gig is a full-time job itself. Hundr
 
 ## Features
 
-- **Multi-source parsing** - Telegram channels (RU + Western) and Hacker News "Who is hiring?" threads
-- **Split modes** - `western`, `ru`, `all` (with manual trigger via bot)
-- **AI scoring (0-100)** - every posting is evaluated by `gpt-oss-20b` with a strict prompt
-- **Hard caps for senior roles** - roles with `Senior`/`Staff`/`Lead`/`Founding`/`Manager` in the title automatically get max 25 points, regardless of stack match
-- **Auto-filtering** - postings older than 30 days are skipped, duplicates are de-duplicated by `raw_hash`
-- **Telegram bot** - manual parse trigger with confirmation flow, job browsing, top-10, statistics
-- **Full Docker** - `docker-compose up` and you're running
-
-## Screenshots
-
-### Bot menu
-![Bot menu](docs/screenshots/bot-menu.png)
-
-### Job feed
-![Job feed](docs/screenshots/bot-jobs.png)
-
-### Top matches
-![Top matches](docs/screenshots/bot-top.png)
-
-### Stats
-![Stats](docs/screenshots/bot-stats.png)
-
-*(screenshots coming soon - bot is operational, capturing assets)*
+- **Multi-source parsing** — Telegram channels (RU + Western) and Hacker News "Who is hiring?" threads
+- **Split modes** — `western`, `ru`, `all` (with manual trigger via bot)
+- **AI scoring (0-100)** — every posting is evaluated by `gpt-oss-20b` with a strict prompt
+- **Hard caps for senior roles** — roles with `Senior`/`Staff`/`Lead`/`Founding`/`Manager` in the title automatically get max 25 points, regardless of stack match
+- **Auto-filtering** — postings older than 30 days are skipped, duplicates are de-duplicated by `raw_hash`
+- **Telegram bot** — manual parse trigger with confirmation flow, job browsing, top-10, statistics
+- **Full Docker** — `docker-compose up` and you're running
 
 ## Tech Stack
 
@@ -54,7 +38,7 @@ Finding a junior developer job or freelance gig is a full-time job itself. Hundr
 | Migrations | Alembic |
 | Telegram bot | aiogram 3.x |
 | Scraping | tgscraper, httpx, BeautifulSoup |
-| LLM | Groq API - `openai/gpt-oss-20b` |
+| LLM | Groq API — `openai/gpt-oss-20b` |
 | Scheduler | APScheduler (manual mode) |
 | Container | Docker + docker-compose |
 
@@ -108,10 +92,10 @@ cp backend/.env.example backend/.env
 
 Fill in `backend/.env` with your keys:
 
-- `GROQ_API_KEY` - get free at [console.groq.com/keys](https://console.groq.com/keys)
-- `TELEGRAM_BOT_TOKEN` - from [@BotFather](https://t.me/BotFather)
-- `TELEGRAM_OWNER_CHAT_ID` - your Telegram user id
-- `TELEGRAM_API_ID` / `TELEGRAM_API_HASH` - from [my.telegram.org](https://my.telegram.org)
+- `GROQ_API_KEY` — get free at [console.groq.com/keys](https://console.groq.com/keys)
+- `TELEGRAM_BOT_TOKEN` — from [@BotFather](https://t.me/BotFather)
+- `TELEGRAM_OWNER_CHAT_ID` — your Telegram user id
+- `TELEGRAM_API_ID` / `TELEGRAM_API_HASH` — from [my.telegram.org](https://my.telegram.org)
 
 ### 3. Run
 
@@ -125,11 +109,11 @@ API: `http://localhost:8000`. Swagger docs: `http://localhost:8000/docs`.
 
 Open your bot in Telegram and send:
 
-- `/start` - main menu
-- `/parse` - run parsing (Western sources first, then asks about RU with inline buttons)
-- `/jobs` - latest 5 postings with score >= 60
-- `/top` - top-10 from the past week
-- `/stats` - database statistics
+- `/start` — main menu
+- `/parse` — run parsing (Western sources first, then asks about RU with inline buttons)
+- `/jobs` — latest 5 postings with score >= 60
+- `/top` — top-10 from the past week
+- `/stats` — database statistics
 
 ## Development
 
@@ -164,5 +148,5 @@ MIT
 
 ## Author
 
-**UnNoir228** - [GitHub](https://github.com/UnNoir228)
+**UnNoir228** — [GitHub](https://github.com/UnNoir228)
 
